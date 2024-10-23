@@ -406,6 +406,11 @@ nav ul li a:hover::after {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.hobby:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .hobby h2 {
@@ -419,6 +424,7 @@ nav ul li a:hover::after {
     height: 95%; /* Set a specific height for all videos */
     border-radius: 8px; /* Optional: Adds rounding to the video edges */
 }
+
 
 .video-fill {
     object-fit:none; /* Ensures the video fills the entire area, possibly cropping */
@@ -441,7 +447,15 @@ nav ul li a:hover::after {
 }
 
 .music-player {
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.music-player:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .music-player h2 {
@@ -486,10 +500,11 @@ audio {
 .social-icon {
     font-size: 40px;
     color: #fff;
-    transition: color 0.3s;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .social-icon:hover {
+    transform: scale(1.2);
     color: #e76851;
 }
 

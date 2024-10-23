@@ -45,3 +45,52 @@
         function closemenu(){
             sidemen.style.right = "-200px"
         }
+
+
+        const songs = [
+            {
+                title: "Balang Araw - I Belong to the Zoo",
+                src: "balangaraw.mp3",
+                albumArt: "m1.png"
+            },
+            {
+                title: "IF AND/OR WHEN - Ruel",
+                src: "ifandorwhen.mp3",
+                albumArt: "m2.png"
+            },
+            {
+                title: "In The Stars - Benson Boone",
+                src: "inthestars.mp3",
+                albumArt: "m3.png"
+            }
+        ];
+        
+        let currentSongIndex = 0;
+        const audioPlayer = document.getElementById('audio-player');
+        const audioSource = document.getElementById('audio-source');
+        const songTitle = document.getElementById('song-title');
+        const albumArt = document.getElementById('album-art');
+        
+        function loadSong(songIndex) {
+            const song = songs[songIndex];
+            songTitle.textContent = song.title;
+            audioSource.src = song.src;
+            albumArt.src = song.albumArt;
+            audioPlayer.load(); // Reload the audio element to reflect new source
+        }
+        
+        document.getElementById('next-song').addEventListener('click', () => {
+            currentSongIndex = (currentSongIndex + 1) % songs.length; // Loop to first song
+            loadSong(currentSongIndex);
+            audioPlayer.play(); // Autoplay next song
+        });
+        
+        document.getElementById('prev-song').addEventListener('click', () => {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length; // Loop to last song
+            loadSong(currentSongIndex);
+            audioPlayer.play();
+        });
+        
+        // Initial load
+        loadSong(currentSongIndex);
+        

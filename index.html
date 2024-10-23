@@ -125,19 +125,22 @@
         <!-- Music Section -->
         <section id="music">
             <div class="container">
-                <h1 class="subtitle">My Favorite Music</h1>
+                <h1 class="subtitle">My Top 3 Music</h1>
                 <div class="music-player">
-                    <h2>Balang Araw - I Belong to the Zoo</h2>
-                    <div class="music-bg">
-                        <img src="m1.png" alt="">
-                    <audio controls>
-                        <source src="favmusic.mp3" type="audio/mpeg">
+                    <h2 id="song-title">Balang Araw - I Belong to the Zoo</h2>
+                    <img id="album-art" src="m1.png" alt="Album Art" width="200px" />
+                    <audio id="audio-player" controls controlslist="nodownload noplaybackrate nofastforward norewind">
+                        <source id="audio-source" src="balangaraw.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
-                </div>
+                    <div class="controls">
+                        <button id="prev-song">Previous</button>
+                        <button id="next-song">Next</button>
+                    </div>
                 </div>
             </div>
         </section>
+        
         
 
         <section id="contact">

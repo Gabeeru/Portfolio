@@ -434,6 +434,8 @@ nav ul li a:hover::after {
     object-fit: cover; /* Ensures the video covers the entire area without distortion */
 }
 
+
+/* =========MUSIC======== */
 #music {
     margin-top: 50px;
     padding: 20px;
@@ -447,25 +449,46 @@ nav ul li a:hover::after {
 }
 
 .music-player {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
     margin-top: 20px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    align-items: center;
 }
 
 .music-player:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
+#album-art {
+    height: 400px;
+    width: 400px;
+}
+#audio-player {
+    width: 450px;
+}
 .music-player h2 {
     color: #fff;
     font-size: 24px;
 }
 
+.controls button {
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 5px;
+    background-color: #d44848; 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #f23232; 
+}
+
 audio {
-    width: 100%;
-    margin-top: 10px;
+    width: 1%;
+    margin-top: 0px;
 }
 
 
@@ -629,11 +652,78 @@ nav .fa-solid{
         left: 25px;
         cursor: pointer;
     }
+
+
+    #music {
+        margin-top: 50px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .music-player {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 20px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        align-items: center;
+    }
+    
+    .music-player:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    #album-art {
+        height: 100%;
+        width: 100%;
+    }
+    #audio-player {
+        width: 100%;
+    }
+    
+    .music-player h2 {
+        color: #fff;
+        font-size: 24px;
+    }
+    
+    .controls button {
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin: 5px;
+        background-color: #d44848; 
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .controls button:hover {
+        background-color: #f23232; 
+    }
+    
+    audio {
+        width: 1%;
+        margin-top: 0px;
+    }
+    
 }
 
 @media (max-width: 480px) {
     #about .container {
         padding: 10px;
+    }
+
+
+    #greeting{
+        font-size: 28px;
+    }
+
+    .header-text h1 {
+        font-size: 28px;
     }
 
     .row {
